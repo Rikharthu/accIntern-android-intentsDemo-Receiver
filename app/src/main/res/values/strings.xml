@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Receiver</string>
+    <string name="waiting_for_intents">Waiting for Intents...</string>
+</resources>
