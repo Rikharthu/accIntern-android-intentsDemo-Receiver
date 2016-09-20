@@ -16,10 +16,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // TODO REFACTOR, use str resources for format and instantiate intent to avoid using getIntent twice
         mTextView= (TextView) findViewById(R.id.messageTextView);
-        String msg = getIntent().getStringExtra(Intent.EXTRA_TEXT);
+        String msg = getIntent().getStringExtra("sms_body");
+        String from = getIntent().getStringExtra("address");
         if(msg!=null) {
-            mTextView.setText(msg);
+            mTextView.setText("from: "+from+"\n"+msg);
         }
     }
 
