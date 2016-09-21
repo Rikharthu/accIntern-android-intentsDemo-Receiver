@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
         String msg = getIntent().getStringExtra("sms_body");
         Log.d(TAG,"received msg:["+msg+"}");
         String from = getIntent().getStringExtra("address");
-        if(msg==null || msg=="") {
+
+        if(msg==null || msg.equals("")) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage("Receiver should not be launched explicitly!")
                     .setCancelable(false)
